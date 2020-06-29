@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+
+.simpleList {
+  margin: 2rem auto;
+  max-width:25rem;
+  a{
+    color:$color-white;
+  }
+  &-description{
+    font-size: .8rem;
+    margin-top: .3rem;
+    font-style: italic;
+  }
+  &-author{
+    color: wheat;
+    margin: 7px 0;
+    font-style: italic;
+    font-size: 11px;
+  }
+  &-pagination{
+    list-style: none;
+    margin: 2rem auto;
+    max-width:25rem;
+    li{
+      margin:0 1rem;
+      color:#00afab;
+      font-size:1rem;
+      cursor:pointer;
+      transition:.2s linear;
+      &:hover{
+        transform: scale(1.5);
+        transition: .2s linear;
+      }
+    }
+  }
+ 
+}

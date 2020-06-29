@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+
+.dashboardWidgets {
+  padding: 4rem 0 2rem;
+  display: table;
+  width: 100%;
+  background: #525252; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3d72b4, #525252); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #3d72b4,
+    #525252
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  &-title {
+    font-size: 2rem;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+  }
+  .form-checkbox {
+    margin-top: 2rem;
+  }
+  form {
+    border:1px solid cadetblue;
+    width: 40%;
+    margin: 1rem auto;
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
