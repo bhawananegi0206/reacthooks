@@ -20,9 +20,11 @@ npm run start
 
 ```
 ### Breif Description
-### API: https://www.cnbc.com/id/100727362/device/rss/rss.html
-     https://codepen.io/picks/feed/ 
+### API: 
      http://localhost:8080/src/rssFeed/rssFeed.xml
+     https://www.cnbc.com/id/100727362/device/rss/rss.html
+     https://codepen.io/picks/feed/ 
+    
 
 
 1. Used React , Hooks 
