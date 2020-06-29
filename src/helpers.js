@@ -16,9 +16,14 @@ Array.prototype.customfilter =  function (items) {
   return result;
 }
 
-Array.prototype.customReduce = function(callback, accumulator) {
+Array.prototype.customReduce = function(callback, acc) {
   for (let i = 0; i < this.length; i++) {
-      accumulator = callback(accumulator, this[i]);
+      acc = callback(acc, this[i]);
   }
-  return accumulator;
+  return acc;
 }
+
+Array.prototype.customForEach = function(callback) {
+  for (var i = 0; i < this.length; i++)
+      callback(this[i], i, this);
+};

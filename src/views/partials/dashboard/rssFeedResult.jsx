@@ -1,8 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
-import SimpleList from '../../../components/list/SimpleList.jsx'
-// import { customfilter } from '../../../helpers';
+import Items from '../../../components/list/Items.jsx'
 
 import './rssFeedResult.scss'
 
@@ -21,7 +20,7 @@ function rssFeedResult () {
         <div className='rssFeedResult'>
           <div className='rssFeedResult-listTitle center'>{title}</div>
           <div className='rssFeedResult-listDesc center'>{description}</div>
-          <SimpleList items={itemsList} />
+          <Items items={itemsList} />
         </div>
       )}
     </React.Fragment>

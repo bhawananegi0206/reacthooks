@@ -1,7 +1,7 @@
 import React, { useState, useMemo} from 'react';
 import PropTypes from 'prop-types';
 
-import './SimpleList.scss'
+import './Items.scss'
 
 const SimpleList = ({ items }) => {
   const [lists, setListValues] = useState({
@@ -19,11 +19,9 @@ const SimpleList = ({ items }) => {
   }
 
   const { selectedItemList, currentPage, itemsPerPage } = lists;
- // const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfLastItem = useMemo(() => currentPage * itemsPerPage);
   const indexOfFirstItem = useMemo(() => indexOfLastItem - itemsPerPage);
   const renderList = useMemo(() =>  items && selectedItemList.slice(indexOfFirstItem, indexOfLastItem));
-  //const renderList =  items && selectedItemList.slice(indexOfFirstItem, indexOfLastItem);
   const pagination = []
   for (let i = 1; i <= Math.ceil(items.length / itemsPerPage); i++) {
     pagination.push(i)
@@ -38,9 +36,6 @@ const SimpleList = ({ items }) => {
               <a href={it.links[0].url} className='simpleList-title'>
                 {it.title}
               </a>
-              <div className="simpleList-author">
-                {it.authors[0].name}
-                </div>
             </div>
           </div>
         ))}
