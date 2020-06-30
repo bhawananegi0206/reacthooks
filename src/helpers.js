@@ -1,4 +1,4 @@
-Array.prototype.customfilter =  function (items) {
+Array.prototype.customfilter = (items) => {
     let result = [];
     for(let i = 0; i < this.length; i++) {
       if (items(this[i], i, this))
@@ -8,7 +8,7 @@ Array.prototype.customfilter =  function (items) {
   };
   
   
-  Array.prototype.customMap = function(callback) {
+  Array.prototype.customMap = (callback) => {
   let result = [];
    for (let i = 0; i < this.length; i++) {
     result[i] = callback(this[i], i);
@@ -16,14 +16,15 @@ Array.prototype.customfilter =  function (items) {
   return result;
 }
 
-Array.prototype.customReduce = function(callback, acc) {
+Array.prototype.customReduce = (callback, acc) => {
   for (let i = 0; i < this.length; i++) {
       acc = callback(acc, this[i]);
   }
   return acc;
 }
 
-Array.prototype.customForEach = function(callback) {
-  for (var i = 0; i < this.length; i++)
-      callback(this[i], i, this);
+Array.prototype.customForEach = (callback) => {
+  for (let i = 0; i < this.length; i++){
+    callback(this[i], i, this);
+  }
 };
