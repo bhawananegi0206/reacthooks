@@ -1,9 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
-import Items from '../../../components/list/Items.jsx'
+import simpleList from '../../../components/list/simpleList.jsx'
 
 import './rssFeedResult.scss'
+import SimpleList from '../../../components/list/simpleList.jsx'
 
 function rssFeedResult () {
   const feedData = useSelector(state => state.dashboard.feedData)
@@ -20,7 +21,7 @@ function rssFeedResult () {
         <div className='rssFeedResult'>
           <div className='rssFeedResult-listTitle center'>{title}</div>
           <div className='rssFeedResult-listDesc center'>{description}</div>
-          <Items items={itemsList} />
+          <simpleList items={itemsList} />
         </div>
       )}
     </React.Fragment>

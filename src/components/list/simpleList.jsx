@@ -1,7 +1,7 @@
 import React, { useState, useMemo} from 'react';
 import PropTypes from 'prop-types';
 
-import './Items.scss'
+import './simpleList.scss'
 
 const SimpleList = ({ items }) => {
   const [lists, setListValues] = useState({
